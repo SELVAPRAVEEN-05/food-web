@@ -8,15 +8,19 @@ interface Props {
   body?: string;
   image?: string;
   date?: string;
+  className?: string;
+  imageClassName?: string;
 }
 
 export const Card = ({
   variant = "default",
   icon = <TeaIcon />,
-  image = "",
-  title = "",
-  body = "",
-  date = "",
+  image,
+  title,
+  body,
+  date = "January 3, 2023",
+  className,
+  imageClassName,
 }: Props) => {
   return (
     <>
@@ -30,9 +34,14 @@ export const Card = ({
           </div>
         </div>
       ) : (
-        <div className="f-full rounded-xl overflow-hidden shadow-md">
+        <div className="f-full rounded-xl overflow-hidden shadow-lg">
           <div className="">
-            <Image src="https://www.thecookierookie.com/wp-content/uploads/2023/04/featured-stovetop-burgers-recipe-500x500.jpg" alt="" />
+            <img className={`w-full ${imageClassName}`} src={image} />
+          </div>
+          <div className={`p-[25px] ${className}`}>
+            <p className="font-medium text-[#737865]">{date}</p>
+            <p className="text-xl font-medium text-[#2C2F24] mt-4">{title}</p>
+            <p className="font-medium text-[#737865] mt-4">{body}</p>
           </div>
         </div>
       )}
