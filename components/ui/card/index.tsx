@@ -2,12 +2,17 @@ import { TeaIcon } from "@/components/assets";
 import Image from "next/image";
 
 interface Props {
-  variant?: "default" | "imaged";
+  variant?: "default" | "imaged" | "review";
   icon?: React.ReactNode;
   title?: string;
   body?: string;
   image?: string;
   date?: string;
+  reviewer?: {
+    name: string;
+    location: string;
+    avatar: string;
+  };
   className?: string;
   imageClassName?: string;
 }
@@ -19,6 +24,7 @@ export const Card = ({
   title,
   body,
   date = "January 3, 2023",
+  reviewer,
   className,
   imageClassName,
 }: Props) => {
@@ -33,16 +39,41 @@ export const Card = ({
             Explore Menu
           </div>
         </div>
-      ) : (
-        <div className="f-full rounded-xl overflow-hidden shadow-lg">
-          <div className="">
-            <img className={`w-full ${imageClassName}`} src={image} />
-          </div>
+      ) : variant === "imaged" ? (
+        <div className="w-full rounded-xl overflow-hidden shadow-lg">
+          <img
+            className={`w-full ${imageClassName}`}
+            src={image}
+            alt="Card image"
+          />
           <div className={`p-[25px] ${className}`}>
             <p className="font-medium text-[#737865]">{date}</p>
             <p className="text-xl font-medium text-[#2C2F24] mt-4">{title}</p>
             <p className="font-medium text-[#737865] mt-4">{body}</p>
           </div>
+        </div>
+      ) : (
+        <div className="bg-[#F9F9F7] rounded-xl p-9 shadow-md w-full max-w-md">
+          <p className="text-2xl font-bold text-[#AD343E]">
+            <span className="italic">"</span>
+            {title}
+            <span className="italic">"</span>
+          </p>
+          <p className="text-[#414536] mt-3">{body}</p>
+          <hr className="my-4 border-[#DBDFD0]" />
+          {reviewer && (
+            <div className="flex items-center mt-4">
+              <img
+                src={reviewer.avatar}
+                alt={reviewer.name}
+                className="w-10 h-10 rounded-full"
+              />
+              <div className="ml-3">
+                <p className="font-bold text-[#2C2F24]">{reviewer.name}</p>
+                <p className="text-[#737865] text-sm">{reviewer.location}</p>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </>

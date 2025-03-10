@@ -2,15 +2,32 @@ import { LogoWhite } from "@/components/assets";
 import { FaFacebookF, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const pages = [
-  "Home", "About", "Menu", "Pricing", "Blog", "Contact", "Delivery"
+  "Home",
+  "About",
+  "Menu",
+  "Pricing",
+  "Blog",
+  "Contact",
+  "Delivery",
 ];
 
 const utilityPages = [
-  "Start Here", "Styleguide", "Password Protected", 
-  "404 Not Found", "Licenses", "Changelog", "View More"
+  "Start Here",
+  "Styleguide",
+  "Password Protected",
+  "404 Not Found",
+  "Licenses",
+  "Changelog",
+  "View More",
 ];
 
-const instagramImages = Array(4).fill("https://static.toiimg.com/photo/101136807.cms");
+
+const instagramImages = [
+  "https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg",
+  "https://cdn.bhdw.net/im/stack-of-pancakes-top-with-fruits-and-maple-syrup-in-a-plate-wallpaper-60497_w635.webp",
+  "https://upload.wikimedia.org/wikipedia/commons/2/2e/Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg",
+  "https://funwave.in/blogs/wp-content/uploads/2023/01/FUNWAVE-29-5-202236421-min-715x1024.png",
+];
 
 export const Footer = () => {
   return (
@@ -22,20 +39,33 @@ export const Footer = () => {
             <LogoWhite />
           </div>
           <p className="text-sm text-gray-300 w-[250px] my-16">
-            In the new era of technology, we look into the future with certainty and pride for our company.
+            In the new era of technology, we look into the future with certainty
+            and pride for our company.
           </p>
           {/* Social Icons */}
           <div className="flex space-x-4">
-            <a href="#" className="text-white hover:text-red-500 transition duration-300">
+            <a
+              href="#"
+              className="text-white hover:text-red-500 transition duration-300"
+            >
               <FaTwitter size={24} />
             </a>
-            <a href="#" className="text-white hover:text-blue-600 transition duration-300">
+            <a
+              href="#"
+              className="text-white hover:text-blue-600 transition duration-300"
+            >
               <FaFacebookF size={24} />
             </a>
-            <a href="#" className="text-white hover:text-pink-500 transition duration-300">
+            <a
+              href="#"
+              className="text-white hover:text-pink-500 transition duration-300"
+            >
               <FaInstagram size={24} />
             </a>
-            <a href="#" className="text-white hover:text-gray-500 transition duration-300">
+            <a
+              href="#"
+              className="text-white hover:text-gray-500 transition duration-300"
+            >
               <FaGithub size={24} />
             </a>
           </div>
@@ -47,7 +77,10 @@ export const Footer = () => {
           <ul className="space-y-3">
             {pages.map((page) => (
               <li key={page}>
-                <a href="#" className="text-gray-300 hover:text-white transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-white transition duration-300"
+                >
                   {page}
                 </a>
               </li>
@@ -61,7 +94,10 @@ export const Footer = () => {
           <ul className="space-y-3">
             {utilityPages.map((page) => (
               <li key={page}>
-                <a href="#" className="text-gray-300 hover:text-white transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-white transition duration-300"
+                >
                   {page}
                 </a>
               </li>
@@ -86,7 +122,9 @@ export const Footer = () => {
 
       {/* Copyright */}
       <div className="text-center mt-16 pt-10 border-t border-gray-700">
-        <p className="text-sm text-gray-400">Copyright © 2023 Hashtag Developer. All Rights Reserved.</p>
+        <p className="text-sm text-gray-400">
+          Copyright © 2023 Hashtag Developer. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
