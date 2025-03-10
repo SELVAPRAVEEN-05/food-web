@@ -5,7 +5,10 @@ import Image from "next/image";
 import { Card } from "@/components/ui";
 import { AiFillMessage } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
+import { FaClock } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
+import { HiMiniReceiptPercent } from "react-icons/hi2";
+import { IoMdCart } from "react-icons/io";
 import {
   CakeIcon,
   DrinksIcon,
@@ -118,7 +121,8 @@ export default function Home() {
       reviewer: {
         name: "Sophie Robson",
         location: "Los Angeles, CA",
-        avatar: "https://cdn.expertphotography.com/wp-content/uploads/2018/10/cool-profile-pictures-retouching-1.jpg",
+        avatar:
+          "https://cdn.expertphotography.com/wp-content/uploads/2018/10/cool-profile-pictures-retouching-1.jpg",
       },
     },
     {
@@ -136,9 +140,16 @@ export default function Home() {
       reviewer: {
         name: "Andy Smith",
         location: "San Francisco, CA",
-        avatar: "https://newprofilepic.photo-cdn.net//assets/images/article/profile.jpg?90af0c8",
+        avatar:
+          "https://newprofilepic.photo-cdn.net//assets/images/article/profile.jpg?90af0c8",
       },
     },
+  ];
+
+  const features = [
+    { icon: <FaClock />, text: "Delivery within 30 minutes" },
+    { icon: <HiMiniReceiptPercent />, text: "Best Offer & Prices" },
+    { icon: <IoMdCart />, text: "Online Services Available" },
   ];
 
   return (
@@ -147,14 +158,14 @@ export default function Home() {
       <div className="relative">
         <Image src={logo} alt="" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <p className="text-[90px] w-[600px] font-playfair  text-[#2C2F24] leading-none">
+          <p className="xl:text-[90px] lg:text-[70px] md:text-[60px] md:w-[450px] xl:w-[600px] lg:w-[500px] font-playfair  text-[#2C2F24] leading-none">
             Best food for your taste
           </p>
-          <p className="max-w-sm text-md font-mono ">
+          <p className="max-w-sm text-md font-mono lg:mt-4 md:mt-3">
             Discover delectable cuisine and unforgettable moments in our
             welcoming, culinary haven.
           </p>
-          <div className="mt-4 flex gap-4">
+          <div className="mt-4 lg:flex gap-4 hidden">
             <Button
               size="lg"
               variant="solid"
@@ -171,11 +182,29 @@ export default function Home() {
               Explore Menu
             </Button>
           </div>
+
+          <div className="mt-4 flex gap-4  lg:hidden">
+            <Button
+              size="md"
+              variant="solid"
+              color="danger"
+              className="rounded-full bg-[#AD343E] "
+            >
+              Book A Table
+            </Button>
+            <Button
+              size="md"
+              variant="bordered"
+              className="rounded-full border-[#2C2F24]"
+            >
+              Explore Menu
+            </Button>
+          </div>
         </div>
       </div>
 
       {/* it is explore */}
-      <div className="mt-[90px] px-[7.5rem] ">
+      <div className="mt-[90px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  ">
         <p className="text-center font-playfair font-medium text-[55px]">
           Browse Our Menu
         </p>
@@ -188,53 +217,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[90px] pt-[90px] pb-[120px]  px-[7.5rem] bg-[#F9F9F7]">
-        <div className="flex mb-16 items-center justify-between">
-          <p className="font-playfair font-medium text-[55px]">
-            Our Blog & Articles
-          </p>
-          <Button
-            size="lg"
-            variant="solid"
-            color="danger"
-            className="rounded-full bg-[#AD343E] "
-          >
-            Read All Articles
-          </Button>
-        </div>
-        <div className=" grid grid-cols-12 gap-6 ">
-          <div className="col-span-12 md:col-span-6">
-            <Card
-              variant="imaged"
-              imageClassName="h-[450px]"
-              title={articles[0].title}
-              body={articles[0].body}
-              date={articles[0].date}
-              image={articles[0].image}
-            />
-          </div>
-
-          <div className="col-span-12 md:col-span-6 grid grid-cols-2 gap-6">
-            {articles.slice(1).map((article) => (
-              <div key={article.id}>
-                <Card
-                  className="pt-4 pb-0 px-4"
-                  imageClassName="h-[200px]"
-                  variant="imaged"
-                  title={article.title}
-                  date={article.date}
-                  image={article.image}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-[90px] pt-[90px] pb-[120px]  px-[7.5rem] bg-[#F9F9F7] grid grid-cols-2 gap-[140px]">
+      <div className="mt-[90px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7] grid grid-cols-2 lg:gap-[100px] xl:gap-[140px]">
         <div className="relative">
           <img src="https://www.fitntasty.ch/wp-content/uploads/2022/04/wrap-legumes-poulet.jpg" />
-          <div className="absolute bottom-[-50px] right-[-20px] bg-gray-800  text-white p-12 rounded-xl">
+          <div className="absolute lg:bottom-0 lg:right-[-60px] xl:bottom-[-50px] right-[-20px] bg-gray-800  text-white p-12 rounded-xl">
             <p className="text-2xl font-bold mb-8">Come and visit us</p>
             <div className="space-y-6">
               {/* Phone number */}
@@ -268,7 +254,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center">
           <div>
-            <p className="font-playfair font-medium text-[55px] leading-[4.5rem] mb-6">
+            <p className="font-playfair font-medium lg:text-[40px] xl:text-[55px] lg:leading-[3rem] xl:leading-[4.5rem] mb-6">
               We provide healthy food for your family.
             </p>
             <p className="text-lg text-[#2C2F24] ">
@@ -295,7 +281,7 @@ export default function Home() {
       </div>
 
       {/* types */}
-      <div className="mt-[90px] pt-[90px] pb-[120px]  px-[7.5rem]">
+      <div className="mt-[50px] pt-[70px] pb-[70px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] ">
         <p className="font-playfair font-medium text-[55px] max-w-[600px] leading-[4rem] mb-14">
           We also offer unique services for your events
         </p>
@@ -316,7 +302,65 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[70px] pt-[90px] pb-[120px]  px-[7.5rem]">
+      <div className="mt-[70px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7] grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-12 col-span-7 gap-6">
+          <div className="md:col-span-7 h-[635px]">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1673830185949-f64586bd8860?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw="
+              alt="Chef preparing food"
+              className="w-full h-full object-cover rounded-lg shadow-md"
+            />
+          </div>
+          <div className="col-span-4">
+            <div className="xl:my-[35px] lg:my-[25px]">
+              <img
+                src="https://api.cloudly.space/resize/crop/1200/627/60/aHR0cHM6Ly9zdGF0aWMuYXBpZGFlLXRvdXJpc21lLmNvbS9maWxlc3RvcmUvb2JqZXRzLXRvdXJpc3RpcXVlcy9pbWFnZXMvMTg0LzEwMy85MDA0OTg0LmpwZw==/image.jpg"
+                alt="Bowl of shrimp pasta"
+                className="w-full h-full object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div className="">
+              <img
+                src="https://scontent-tir3-1.xx.fbcdn.net/v/t39.30808-6/480327763_929529489351444_8382520552722508766_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9g_4MK91NNoQ7kNvgHvqTbL&_nc_zt=23&_nc_ht=scontent-tir3-1.xx&_nc_gid=AOo2XQRHH7Xk6DrpIAEOvv4&oh=00_AYHTasaNYaAh3mM4nGdxE1M45KJw81r3W7Tfm_qLniRaaA&oe=67D48C5C"
+                alt="Grilled chicken with sauce"
+                className="w-full h-full object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div className="block xl:hidden mt-[20px]">
+              <img
+                src="https://i.pinimg.com/564x/a6/93/9a/a6939ab9e884b3da3fd54b590bc23b54.jpg"
+                alt="Grilled chicken with sauce"
+                className="w-full h-full object-cover rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Right side - Text content */}
+        <div className="flex flex-col justify-center col-span-5">
+          <p className="font-playfair font-medium lg:text-[45px] xl:text-[55px]  lg:leading-[3rem] xl:leading-[4.5rem] mb-5">
+            Fastest Food Delivery in City
+          </p>
+
+          <p className="text-[#414536]">
+            Our visual designer lets you quickly and drag a down your way to
+            customappps for both keep desktops.
+          </p>
+
+          <div className="space-y-4 mt-4">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center">
+                <div className="bg-[#AD343E] rounded-full w-8 h-8 flex items-center justify-center text-white mr-4">
+                  {feature.icon}
+                </div>
+                <span className="font-medium text-xl">{feature.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-[30px] pt-[90px] pb-[70px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] ">
         <p className="font-playfair font-medium text-[55px] text-center mb-14">
           What Our Customers Say
         </p>
@@ -324,6 +368,49 @@ export default function Home() {
           {reviews.map((review, index) => (
             <Card key={index} variant="review" {...review} />
           ))}
+        </div>
+      </div>
+
+      <div className="mt-[90px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7]">
+        <div className="flex mb-16 items-center justify-between">
+          <p className="font-playfair font-medium text-[55px]">
+            Our Blog & Articles
+          </p>
+          <Button
+            size="lg"
+            variant="solid"
+            color="danger"
+            className="rounded-full bg-[#AD343E] "
+          >
+            Read All Articles
+          </Button>
+        </div>
+        <div className=" grid grid-cols-12 gap-6 ">
+          <div className="col-span-12 md:col-span-6">
+            <Card
+              variant="imaged"
+              imageClassName="h-[450px]"
+              title={articles[0].title}
+              body={articles[0].body}
+              date={articles[0].date}
+              image={articles[0].image}
+            />
+          </div>
+
+          <div className="col-span-12 md:col-span-6 grid grid-cols-2 gap-6">
+            {articles.slice(1).map((article) => (
+              <div key={article.id}>
+                <Card
+                  className="lg:pt-2 xl:pt-4 pb-0 px-4"
+                  imageClassName="lg:h-[180px] xl:h-[200px]"
+                  variant="imaged"
+                  title={article.title}
+                  date={article.date}
+                  image={article.image}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

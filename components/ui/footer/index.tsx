@@ -31,10 +31,10 @@ const instagramImages = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-12 px-[7.5rem]">
+    <footer className="bg-gray-800 text-white py-12 lg:px-[5rem] xl:px-[7.5rem]">
       <div className="flex flex-col md:flex-row justify-between">
         {/* Logo and Description */}
-        <div className="mb-6 md:mb-0 md:w-1/3">
+        <div className="mb-6 md:mb-0">
           <div className="flex items-center mb-4">
             <LogoWhite />
           </div>
@@ -72,7 +72,7 @@ export const Footer = () => {
         </div>
 
         {/* Pages */}
-        <div className="mb-6 md:mb-0 md:w-1/4">
+        <div className="mb-6">
           <h3 className="font-bold mb-6">Pages</h3>
           <ul className="space-y-3">
             {pages.map((page) => (
@@ -89,7 +89,7 @@ export const Footer = () => {
         </div>
 
         {/* Utility Pages */}
-        <div className="mb-6 md:mb-0 md:w-1/4">
+        <div className="mb-6">
           <h3 className="font-bold mb-6">Utility Pages</h3>
           <ul className="space-y-3">
             {utilityPages.map((page) => (
@@ -106,7 +106,7 @@ export const Footer = () => {
         </div>
 
         {/* Instagram Feed */}
-        <div className="md:w-1/4">
+        <div className="xl:w-1/4 lg:w-[30%]">
           <h3 className="font-bold mb-4">Follow Us On Instagram</h3>
           <div className="grid grid-cols-2 gap-3">
             {instagramImages.map((src, index) => (

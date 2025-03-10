@@ -33,14 +33,16 @@ export const Card = ({
       {variant === "default" ? (
         <div className="border border-[#DBDFD0] rounded-xl p-[35px] flex flex-col items-center mb-1">
           <div>{icon}</div>
-          <p className="mt-[30px] mb-4 font-bold text-2xl">{title}</p>
+          <p className="mt-[30px] mb-4 font-bold md:text-[21px] xl:text-2xl">
+            {title}
+          </p>
           <p className="text-center text-[#414536] mb-[30px]">{body}</p>
-          <div className="cursor-pointer text-[#AD343E] font-bold">
+          <p className="cursor-pointer text-[#AD343E] font-bold transition duration-300 ease-in-out hover:text-red-500 hover:text-shadow-[0_0_8px_#AD343E]">
             Explore Menu
-          </div>
+          </p>
         </div>
       ) : variant === "imaged" ? (
-        <div className="w-full rounded-xl overflow-hidden shadow-lg">
+        <div className="rounded-xl overflow-hidden shadow-lg">
           <img
             className={`w-full ${imageClassName}`}
             src={image}
@@ -53,27 +55,31 @@ export const Card = ({
           </div>
         </div>
       ) : (
-        <div className="bg-[#F9F9F7] rounded-xl p-9 shadow-md w-full max-w-md">
-          <p className="text-2xl font-bold text-[#AD343E]">
+        <div className="bg-[#F9F9F7] rounded-xl lg:p-7 xl:p-9 shadow-md w-full max-w-md flex flex-col justify-between">
+          <div>
+          <p className="lg:text-xl  xl:text-2xl font-bold text-[#AD343E]">
             <span className="italic">"</span>
             {title}
             <span className="italic">"</span>
           </p>
           <p className="text-[#414536] mt-3">{body}</p>
+          </div>
+          <div>
           <hr className="my-4 border-[#DBDFD0]" />
-          {reviewer && (
-            <div className="flex items-center mt-4">
-              <img
-                src={reviewer.avatar}
-                alt={reviewer.name}
-                className="w-10 h-10 rounded-full"
-              />
-              <div className="ml-3">
-                <p className="font-bold text-[#2C2F24]">{reviewer.name}</p>
-                <p className="text-[#737865] text-sm">{reviewer.location}</p>
+            {reviewer && (
+              <div className="flex items-center mt-4">
+                <img
+                  src={reviewer.avatar}
+                  alt={reviewer.name}
+                  className="w-10 h-10 rounded-full"
+                />
+                <div className="ml-3">
+                  <p className="font-bold text-[#2C2F24]">{reviewer.name}</p>
+                  <p className="text-[#737865] text-sm">{reviewer.location}</p>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
     </>
