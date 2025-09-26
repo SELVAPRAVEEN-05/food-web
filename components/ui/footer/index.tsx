@@ -26,7 +26,7 @@ const instagramImages = [
   "https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg",
   "https://cdn.bhdw.net/im/stack-of-pancakes-top-with-fruits-and-maple-syrup-in-a-plate-wallpaper-60497_w635.webp",
   "https://upload.wikimedia.org/wikipedia/commons/2/2e/Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg",
-  "https://funwave.in/blogs/wp-content/uploads/2023/01/FUNWAVE-29-5-202236421-min-715x1024.png",
+  "https://www.pamperedchef.com/iceberg/com/recipe/39350-lg.jpg",
 ];
 
 export const Footer = () => {

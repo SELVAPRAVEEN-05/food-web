@@ -34,7 +34,7 @@ export default function RootLayout({
       <head />
       <body>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="overflow-hidden h-screen font-sans">
+          <div className="overflow-hidden h-[100dvh] w-full font-sans">
             <div className="h-[12%]">
               <TopBar />
             </div>

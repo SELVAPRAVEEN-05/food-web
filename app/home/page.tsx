@@ -210,7 +210,7 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 mb-[120px]">
           {cardData.map((item, index) => (
-            <div key={index} className="col-span-1">
+            <div key={index} className="col-span-1 transition-all duration-300 hover:s hover:scale-105 " >
               <Card icon={item.icon} title={item.title} body={item.body} />
             </div>
           ))}
@@ -219,7 +219,7 @@ export default function Home() {
 
       <div className="mt-[90px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7] grid grid-cols-2 lg:gap-[100px] xl:gap-[140px]">
         <div className="relative">
-          <img src="https://www.fitntasty.ch/wp-content/uploads/2022/04/wrap-legumes-poulet.jpg" />
+          <img src="https://www.fitntasty.ch/wp-content/uploads/2022/04/wrap-legumes-poulet.jpg" className="rounded-xl"/>
           <div className="absolute lg:bottom-0 lg:right-[-60px] xl:bottom-[-50px] right-[-20px] bg-gray-800  text-white p-12 rounded-xl">
             <p className="text-2xl font-bold mb-8">Come and visit us</p>
             <div className="space-y-6">
@@ -319,9 +319,9 @@ export default function Home() {
                 className="w-full h-full object-cover rounded-lg shadow-md"
               />
             </div>
-            <div className="">
+            <div className="h-[300px]">
               <img
-                src="https://scontent-tir3-1.xx.fbcdn.net/v/t39.30808-6/480327763_929529489351444_8382520552722508766_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9g_4MK91NNoQ7kNvgHvqTbL&_nc_zt=23&_nc_ht=scontent-tir3-1.xx&_nc_gid=AOo2XQRHH7Xk6DrpIAEOvv4&oh=00_AYHTasaNYaAh3mM4nGdxE1M45KJw81r3W7Tfm_qLniRaaA&oe=67D48C5C"
+                src="https://res.cloudinary.com/hksqkdlah/image/upload/c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,h_599,q_auto:low/SFS_Crunchy_Battered-Fried_Chicken_63_wcz66g"
                 alt="Grilled chicken with sauce"
                 className="w-full h-full object-cover rounded-lg shadow-md"
               />
