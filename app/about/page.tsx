@@ -6,9 +6,9 @@ import { AiFillMessage } from "react-icons/ai";
 import { FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
-import clock from "../../components/assets/clock.png";
-import order from "../../components/assets/order.png";
-import profile from "../../components/assets/profile.png";
+import clock from "@/components/assets/clock.png";
+import order from "@/components/assets/order.png";
+import profile from "@/components/assets/profile.png";
 
 export default function AboutPage() {
   const [playVideo, setPlayVideo] = useState(false);
