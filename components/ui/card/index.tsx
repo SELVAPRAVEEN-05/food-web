@@ -1,5 +1,4 @@
 import { TeaIcon } from "@/components/assets";
-import Image from "next/image";
 
 interface Props {
   variant?: "default" | "imaged" | "review";
