@@ -170,8 +170,8 @@ function Menu() {
               You can order through apps
             </h3>
             <p className="text-gray-600 max-w-md">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit enim
-              bibendum sed et aliquet aliquet risus tempor semper.
+              Enjoy seamless food ordering from trusted delivery apps and
+              experience quick, reliable doorstep delivery anytime.
             </p>
           </div>
 
