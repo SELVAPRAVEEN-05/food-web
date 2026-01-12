@@ -45,6 +45,28 @@ export default function AboutPage() {
     },
   ];
 
+  const features = [
+    {
+      img: profile,
+      title: "Multi Cuisine",
+    },
+    {
+      img: order,
+      title: "Easy To Order",
+    },
+    {
+      img: clock,
+      title: "Fast Delivery",
+    },
+  ];
+
+  const info = [
+    { value: "3", label: "Locations" },
+    { value: "1995", label: "Founded" },
+    { value: "65+", label: "Staff Members" },
+    { value: "100%", label: "Satisfied Customers" },
+  ];
+
   return (
     <div>
       {/* ================= ABOUT SECTION ================= */}
@@ -143,20 +165,7 @@ export default function AboutPage() {
 
       {/* ================= FEATURES ================= */}
       <div className="py-20 bg-white flex flex-col md:flex-row justify-center items-center gap-10">
-        {[
-          {
-            img: profile,
-            title: "Multi Cuisine",
-          },
-          {
-            img: order,
-            title: "Easy To Order",
-          },
-          {
-            img: clock,
-            title: "Fast Delivery",
-          },
-        ].map((item, i) => (
+        {features.map((item, i) => (
           <div key={i} className="flex gap-4">
             <img
               src={item.img.src}
@@ -193,12 +202,7 @@ export default function AboutPage() {
 
             {/* STATS */}
             <div className="grid grid-cols-2 gap-6 max-w-lg">
-              {[
-                { value: "3", label: "Locations" },
-                { value: "1995", label: "Founded" },
-                { value: "65+", label: "Staff Members" },
-                { value: "100%", label: "Satisfied Customers" },
-              ].map((item, index) => (
+              {info.map((item, index) => (
                 <div
                   key={index}
                   className="bg-white border border-gray-200 rounded-xl py-8 text-center"

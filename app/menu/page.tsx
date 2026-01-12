@@ -1,69 +1,107 @@
 "use client";
 
-import React, { useState } from "react";
-
-const categories = ["All", "Breakfast", "Main Dishes", "Drinks", "Desserts"];
-
-const menuItems = [
-  {
-    id: 1,
-    title: "Fried Eggs",
-    price: "$9.99",
-    category: "Breakfast",
-    img: "https://images.unsplash.com/photo-1551218808-94e220e084d2",
-  },
-  {
-    id: 2,
-    title: "Hawaiian Pizza",
-    price: "$15.99",
-    category: "Main Dishes",
-    img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-  },
-  {
-    id: 3,
-    title: "Martinez Cocktail",
-    price: "$7.25",
-    category: "Drinks",
-    img: "https://images.unsplash.com/photo-1544145945-f90425340c7e",
-  },
-  {
-    id: 4,
-    title: "Butterscotch Cake",
-    price: "$20.99",
-    category: "Desserts",
-    img: "https://media.istockphoto.com/id/1326149453/photo/dark-chocolate-cake-slice.jpg?s=612x612&w=0&k=20&c=KaZDGCl6ROSRiQfXNUd_AinfvWlv8K5bvPBSqPUXJfA=",
-  },
-  {
-    id: 5,
-    title: "Mint Lemonade",
-    price: "$5.89",
-    category: "Drinks",
-    img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
-  },
-  {
-    id: 6,
-    title: "Chocolate Icecream",
-    price: "$18.05",
-    category: "Desserts",
-    img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f",
-  },
-  {
-    id: 7,
-    title: "Cheese Burger",
-    price: "$12.55",
-    category: "Main Dishes",
-    img: "https://images.unsplash.com/photo-1550547660-d9450f859349",
-  },
-  {
-    id: 8,
-    title: "Classic Waffles",
-    price: "$12.99",
-    category: "Breakfast",
-    img: "https://images.unsplash.com/photo-1562376552-0d160a2f238d",
-  },
-];
+import { useState } from "react";
 
 function Menu() {
+  const categories = ["All", "Breakfast", "Main Dishes", "Drinks", "Desserts"];
+
+  const menuItems = [
+    {
+      id: 1,
+      title: "Fried Eggs",
+      price: "$9.99",
+      category: "Breakfast",
+      img: "https://images.unsplash.com/photo-1551218808-94e220e084d2",
+    },
+    {
+      id: 2,
+      title: "Hawaiian Pizza",
+      price: "$15.99",
+      category: "Main Dishes",
+      img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
+    },
+    {
+      id: 3,
+      title: "Martinez Cocktail",
+      price: "$7.25",
+      category: "Drinks",
+      img: "https://images.unsplash.com/photo-1544145945-f90425340c7e",
+    },
+    {
+      id: 4,
+      title: "Butterscotch Cake",
+      price: "$20.99",
+      category: "Desserts",
+      img: "https://media.istockphoto.com/id/1326149453/photo/dark-chocolate-cake-slice.jpg?s=612x612&w=0&k=20&c=KaZDGCl6ROSRiQfXNUd_AinfvWlv8K5bvPBSqPUXJfA=",
+    },
+    {
+      id: 5,
+      title: "Mint Lemonade",
+      price: "$5.89",
+      category: "Drinks",
+      img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
+    },
+    {
+      id: 6,
+      title: "Chocolate Icecream",
+      price: "$18.05",
+      category: "Desserts",
+      img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f",
+    },
+    {
+      id: 7,
+      title: "Cheese Burger",
+      price: "$12.55",
+      category: "Main Dishes",
+      img: "https://images.unsplash.com/photo-1550547660-d9450f859349",
+    },
+    {
+      id: 8,
+      title: "Classic Waffles",
+      price: "$12.99",
+      category: "Breakfast",
+      img: "https://images.unsplash.com/photo-1562376552-0d160a2f238d",
+    },
+  ];
+
+  const orders = [
+    {
+      name: "Swiggy",
+      logo: "https://cdn.prod.website-files.com/600ee75084e3fe0e5731624c/65b6224b00ab2b9163719086_swiggy-logo.svg",
+    },
+    {
+      name: "Zomato",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Zomato_Logo.svg",
+    },
+    {
+      name: "Domino’s",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/8/8b/DominosPizza.svg",
+    },
+    {
+      name: "Blinkit",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bW7LpZfsb8HDjcY04_3RNaLa3dNxGthhUw&s",
+    },
+    {
+      name: "KFC",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/9/91/KFC_Logo.svg",
+    },
+    {
+      name: "Faasos",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Faasos_Logo.svg/3840px-Faasos_Logo.svg.png",
+    },
+    {
+      name: "Foodpanda",
+      logo: "https://cdn.worldvectorlogo.com/logos/foodpanda-logo.svg",
+    },
+    {
+      name: "Zepto",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Zepto_Logo.svg/1280px-Zepto_Logo.svg.png",
+    },
+    {
+      name: "Magicpin",
+      logo: "https://s3-us-west-2.amazonaws.com/cbi-image-service-prd/original/f05c8752-095b-4708-adc4-02a85aefac6c.png",
+    },
+  ];
   const [active, setActive] = useState("All");
 
   const filteredItems =
@@ -75,9 +113,7 @@ function Menu() {
     <section className="py-24 bg-[#F9F9F7]">
       <div className="max-w-7xl mx-auto px-6">
         {/* TITLE */}
-        <h2 className="font-playfair text-5xl text-center mb-4">
-          Our Menu
-        </h2>
+        <h2 className="font-playfair text-5xl text-center mb-4">Our Menu</h2>
 
         <p className="text-center text-gray-600 max-w-xl mx-auto mb-10">
           We consider all the drivers of change gives you the components you
@@ -118,9 +154,7 @@ function Menu() {
                 <p className="text-[#AD343E] font-semibold mb-1">
                   {item.price}
                 </p>
-                <h3 className="font-bold text-lg mb-2">
-                  {item.title}
-                </h3>
+                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-600">
                   Made with eggs, lettuce, salt, oil and other ingredients.
                 </p>
@@ -132,7 +166,7 @@ function Menu() {
         {/* ORDER APPS */}
         <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="font-playfair text-4xl mb-4">
+            <h3 className="font-playfair text-6xl mb-4">
               You can order through apps
             </h3>
             <p className="text-gray-600 max-w-md">
@@ -141,23 +175,17 @@ function Menu() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {[
-              "Uber Eats",
-              "Grubhub",
-              "Postmates",
-              "DoorDash",
-              "Foodpanda",
-              "Deliveroo",
-              "Instacart",
-              "Just Eat",
-              "DiDi Food",
-            ].map((app) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+            {orders.map((company) => (
               <div
-                key={app}
-                className="bg-white border rounded-lg py-3 text-center font-medium"
+                key={company.name}
+                className="bg-white border rounded-xl py-2 px-3 flex flex-col items-center justify-center gap-3 shadow-sm hover:shadow-md transition"
               >
-                {app}
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="h-10 object-contain"
+                />
               </div>
             ))}
           </div>
