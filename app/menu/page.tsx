@@ -144,7 +144,7 @@ function Menu() {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="bg-white border border-gray-300 rounded-xl shadow-sm overflow-hidden"
+              className="bg-white border border-gray-300 rounded-xl shadow-sm overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"
             >
               <img
                 src={item.img}

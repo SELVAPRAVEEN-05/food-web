@@ -51,7 +51,11 @@ export const TopBar = () => {
 
       {/* Book Table Button */}
       <div className="hidden lg:block">
-        <Button className="rounded-full border-[#2C2F24]" variant="bordered">
+        <Button
+          className="rounded-full border-[#2C2F24]"
+          variant="bordered"
+          onPress={() => router.push("/book")}
+        >
           Book A Table
         </Button>
       </div>
