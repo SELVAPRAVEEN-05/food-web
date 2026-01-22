@@ -22,7 +22,7 @@ function Book() {
   return (
     <div className="pt-20 bg-[#F9F9F7] ">
       {/* TITLE */}
-      <h2 className="font-playfair text-6xl font-bold text-center mb-4">
+      <h2 className="font-playfair text-6xl font-semibold text-center mb-4">
         Book A Table
       </h2>
 

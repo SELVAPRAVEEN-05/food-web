@@ -202,7 +202,7 @@ export default function Home() {
       </div>
 
       {/* it is explore */}
-      <div className="mt-[90px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  ">
+      <div className="mt-[90px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]">
         <p className="text-center font-playfair font-medium text-[55px]">
           Browse Our Menu
         </p>
@@ -218,7 +218,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[90px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7] grid grid-cols-2 lg:gap-[100px] xl:gap-[140px]">
+      <div className="mt-[90px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] bg-[#F9F9F7] grid grid-cols-2 lg:gap-[100px] xl:gap-[140px]">
         <div className="relative">
           <img
             src="https://www.fitntasty.ch/wp-content/uploads/2022/04/wrap-legumes-poulet.jpg"
