@@ -1,20 +1,18 @@
-import React from "react";
-import logo from "@/components/assets/bg (1).svg";
-import { Button } from "@heroui/button";
-import Image from "next/image";
-import { Card } from "@/components/ui";
-import { AiFillMessage } from "react-icons/ai";
-import { FaLocationDot } from "react-icons/fa6";
-import { FaClock } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa6";
-import { HiMiniReceiptPercent } from "react-icons/hi2";
-import { IoMdCart } from "react-icons/io";
 import {
   CakeIcon,
   DrinksIcon,
   MaindishIcon,
   TeaIcon,
 } from "@/components/assets";
+import logo from "@/components/assets/bg (1).svg";
+import { Card } from "@/components/ui";
+import { Button } from "@heroui/button";
+import Image from "next/image";
+import { AiFillMessage } from "react-icons/ai";
+import { FaClock } from "react-icons/fa";
+import { FaLocationDot, FaPhone } from "react-icons/fa6";
+import { HiMiniReceiptPercent } from "react-icons/hi2";
+import { IoMdCart } from "react-icons/io";
 export default function Home() {
   const cardData = [
     {
@@ -210,7 +208,10 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 mb-[120px]">
           {cardData.map((item, index) => (
-            <div key={index} className="col-span-1 transition-all duration-300 hover:s hover:scale-105 " >
+            <div
+              key={index}
+              className="col-span-1 transition-all duration-300 hover:s hover:scale-105 "
+            >
               <Card icon={item.icon} title={item.title} body={item.body} />
             </div>
           ))}
@@ -219,7 +220,10 @@ export default function Home() {
 
       <div className="mt-[90px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7] grid grid-cols-2 lg:gap-[100px] xl:gap-[140px]">
         <div className="relative">
-          <img src="https://www.fitntasty.ch/wp-content/uploads/2022/04/wrap-legumes-poulet.jpg" className="rounded-xl"/>
+          <img
+            src="https://www.fitntasty.ch/wp-content/uploads/2022/04/wrap-legumes-poulet.jpg"
+            className="rounded-xl"
+          />
           <div className="absolute lg:bottom-0 lg:right-[-60px] xl:bottom-[-50px] right-[-20px] bg-gray-800  text-white p-12 rounded-xl">
             <p className="text-2xl font-bold mb-8">Come and visit us</p>
             <div className="space-y-6">

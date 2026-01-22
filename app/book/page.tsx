@@ -22,7 +22,9 @@ function Book() {
   return (
     <div className="pt-20 bg-[#F9F9F7] ">
       {/* TITLE */}
-      <h2 className="font-playfair text-5xl text-center mb-4">Our Menu</h2>
+      <h2 className="font-playfair text-6xl font-bold text-center mb-4">
+        Book A Table
+      </h2>
 
       <p className="text-center text-gray-600 max-w-xl mx-auto mb-10">
         We consider all the drivers of change gives you the components you need
@@ -30,7 +32,7 @@ function Book() {
       </p>
 
       <div className="relative mt-80">
-        <div className="bg-white rounded-2xl absolute -top-60 p-8 left-[32%] shadow-lg">
+        <div className="bg-white max-w-2xl rounded-2xl absolute -top-60 p-8 left-[32%] shadow-lg">
           <form className="space-y-6 ">
             {/* DATE & TIME */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -113,7 +113,9 @@ function Menu() {
     <section className="py-24 bg-[#F9F9F7]">
       <div className="max-w-7xl mx-auto px-6">
         {/* TITLE */}
-        <h2 className="font-playfair text-5xl text-center mb-4">Our Menu</h2>
+        <h2 className="font-playfair text-6xl font-bold text-center mb-4">
+          Our Menu
+        </h2>
 
         <p className="text-center text-gray-600 max-w-xl mx-auto mb-10">
           We consider all the drivers of change gives you the components you
