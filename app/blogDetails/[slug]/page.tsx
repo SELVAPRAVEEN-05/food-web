@@ -1,14 +1,8 @@
 import { menuItems } from "@/app/menu/items";
 import { notFound } from "next/navigation";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
 
 export default async function BlogDetails({ params }: any) {
-    console.log(params)
   const article = menuItems.find((item) => item.slug === params.slug);
 
   if (!article) return notFound();
