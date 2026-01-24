@@ -7,7 +7,8 @@ type Props = {
   };
 };
 
-export default function BlogDetails({ params }: Props) {
+export default async function BlogDetails({ params }: any) {
+    console.log(params)
   const article = menuItems.find((item) => item.slug === params.slug);
 
   if (!article) return notFound();
