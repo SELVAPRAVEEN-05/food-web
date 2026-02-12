@@ -7,8 +7,8 @@ function Pages() {
   const router = useRouter();
 
   return (
-    <div className="py-20 bg-[#F9F9F7]">
-      <h2 className="font-playfair text-6xl font-semibold text-center mb-4">
+    <div className="py-20 px-5 lg:px-0 bg-[#F9F9F7]">
+      <h2 className="font-playfair text-4xl lg:text-6xl font-semibold text-center mb-4">
         Our Blog & Articles
       </h2>
 

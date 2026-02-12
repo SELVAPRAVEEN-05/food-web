@@ -168,7 +168,7 @@ function Menu() {
         {/* ORDER APPS */}
         <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="font-playfair text-6xl mb-4">
+            <h3 className="font-playfair text-5xl lg:text-6xl mb-4">
               You can order through apps
             </h3>
             <p className="text-gray-600 max-w-md">

@@ -8,7 +8,7 @@ function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   return (
-    <div className="py-20 bg-[#F9F9F7] ">
+    <div className="py-20 px-5 lg:px-0 bg-[#F9F9F7] ">
       {/* TITLE */}
       <h2 className="font-playfair text-6xl font-semibold text-center mb-4">
         Contact Us

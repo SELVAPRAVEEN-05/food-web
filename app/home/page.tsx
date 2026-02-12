@@ -166,7 +166,7 @@ export default function Home() {
           alt="Restaurant hero"
           fill
           priority
-          className="object-cover"
+          className="object-cover "
         />
 
         {/* Dark Overlay */}
@@ -245,7 +245,7 @@ export default function Home() {
             src="https://www.fitntasty.ch/wp-content/uploads/2022/04/wrap-legumes-poulet.jpg"
             className="rounded-xl hidden lg:block"
           />
-          <div className="lg:absolute lg:bottom-0 lg:right-[-60px] xl:bottom-[-50px] right-[-20px] bg-gray-800  text-white p-12 rounded-xl">
+          <div className="lg:absolute lg:bottom-0 lg:right-[-60px] xl:bottom-[-50px] bg-gray-800  text-white p-4 lg:p-12 rounded-xl">
             <p className="text-2xl font-bold mb-8">Come and visit us</p>
             <div className="space-y-6">
               {/* Phone number */}
@@ -328,16 +328,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[70px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7] grid grid-cols-12 gap-6">
-        <div className="grid grid-cols-12 col-span-7 gap-6">
-          <div className="md:col-span-7 h-[635px]">
+      <div className="mt-[70px] pt-[90px] pb-[120px] px-[20px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7] grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-12 lg:col-span-7 col-span-12 lg:gap-6">
+          <div className="md:col-span-7 col-span-12 h-[635px]">
             <img
               src="https://plus.unsplash.com/premium_photo-1673830185949-f64586bd8860?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw="
               alt="Chef preparing food"
               className="w-full h-full object-cover rounded-lg shadow-md"
             />
           </div>
-          <div className="col-span-4">
+          <div className="col-span-4 hidden md:block">
             <div className="xl:my-[35px] lg:my-[25px]">
               <img
                 src="https://api.cloudly.space/resize/crop/1200/627/60/aHR0cHM6Ly9zdGF0aWMuYXBpZGFlLXRvdXJpc21lLmNvbS9maWxlc3RvcmUvb2JqZXRzLXRvdXJpc3RpcXVlcy9pbWFnZXMvMTg0LzEwMy85MDA0OTg0LmpwZw==/image.jpg"
@@ -363,8 +363,8 @@ export default function Home() {
         </div>
 
         {/* Right side - Text content */}
-        <div className="flex flex-col justify-center col-span-5">
-          <p className="font-playfair font-medium lg:text-[45px] xl:text-[55px]  lg:leading-[3rem] xl:leading-[4.5rem] mb-5">
+        <div className="flex flex-col justify-center col-span-12 lg:col-span-5">
+          <p className="font-playfair font-medium text-[33px] lg:text-[45px] xl:text-[55px]  lg:leading-[3rem] xl:leading-[4.5rem] mb-5">
             Fastest Food Delivery in City
           </p>
 
@@ -416,7 +416,7 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6">
             <Card
               variant="imaged"
-              imageClassName="h-[450px]"
+              imageClassName="h-[300px] lg:h-[450px]"
               title={articles[0].title}
               body={articles[0].body}
               date={articles[0].date}

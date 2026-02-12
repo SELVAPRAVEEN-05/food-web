@@ -70,7 +70,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* ================= ABOUT SECTION ================= */}
-      <div className="pt-[90px] pb-[120px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] bg-[#F9F9F7] grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="pt-[90px] pb-[120px] px-[20px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] bg-[#F9F9F7] grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="relative">
           <img
             src="https://media.post.rvohealth.io/wp-content/uploads/2020/08/6-reasons-why-eggs-are-the-healthiest-food-on-the-planet-732x549-thumbnail-732x549.jpg"
@@ -78,7 +78,7 @@ export default function AboutPage() {
             alt="Food"
           />
 
-          <div className="absolute bottom-[-40px] right-4 bg-gray-800 text-white p-8 rounded-xl w-[300px]">
+          <div className="absolute bottom-[-100px] lg:bottom-[-20] right-[-20] lg:right-4 bg-gray-800 text-white p-8 rounded-xl w-[300px]">
             <p className="text-2xl font-bold mb-6">Come and visit us</p>
 
             <div className="space-y-4">
@@ -103,7 +103,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center mt-20 lg:mt-0">
           <p className="font-playfair font-medium text-4xl lg:text-5xl mb-6">
             We provide healthy food for your family.
           </p>
@@ -164,7 +164,7 @@ export default function AboutPage() {
       </div>
 
       {/* ================= FEATURES ================= */}
-      <div className="py-20 bg-white flex flex-col md:flex-row justify-center items-center gap-10">
+      <div className="py-20 px-5 lg:px-0 bg-white flex flex-col md:flex-row justify-center items-center gap-10">
         {features.map((item, i) => (
           <div key={i} className="flex gap-4">
             <img
@@ -185,11 +185,11 @@ export default function AboutPage() {
       </div>
 
       {/* ================= INFO / STATS SECTION ================= */}
-      <div className="bg-[#F9F9F7] py-24 md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]">
+      <div className="bg-[#F9F9F7] px-5 py-24 md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* LEFT CONTENT */}
           <div>
-            <h2 className="font-playfair text-4xl lg:text-5xl mb-6 text-[#2C2F24]">
+            <h2 className="font-playfair text-3xl lg:text-5xl mb-6 text-[#2C2F24]">
               A little information for our valuable guest
             </h2>
 

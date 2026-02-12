@@ -20,9 +20,9 @@ function Book() {
 
   const persons = [1, 2, 3, 4, 5, 6];
   return (
-    <div className="pt-20 bg-[#F9F9F7] ">
+    <div className="pt-20 px-5 lg:px-0 bg-[#F9F9F7] ">
       {/* TITLE */}
-      <h2 className="font-playfair text-6xl font-semibold text-center mb-4">
+      <h2 className="font-playfair text-5xl lg:text-6xl font-semibold text-center mb-4">
         Book A Table
       </h2>
 
@@ -31,8 +31,8 @@ function Book() {
         to change to create a truly happens.
       </p>
 
-      <div className="relative mt-80">
-        <div className="bg-white max-w-2xl rounded-2xl absolute -top-60 p-8 left-[32%] shadow-lg">
+      <div className="relative lg:mt-80 mb-8 lg:mb-0">
+        <div className="bg-white max-w-2xl rounded-2xl lg:absolute -top-60 p-8 left-[32%] shadow-lg">
           <form className="space-y-6 ">
             {/* DATE & TIME */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -117,7 +117,7 @@ function Book() {
         <img
           src="https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg"
           alt="dots pattern"
-          className="w-full h-[80%]"
+          className="w-full h-[80%] hidden lg:block"
         />
       </div>
     </div>
