@@ -1,4 +1,8 @@
+"use client";
+
 import { TeaIcon } from "@/components/assets";
+import { useRouter } from "next/navigation";
+
 
 interface Props {
   variant?: "default" | "imaged" | "review";
@@ -27,6 +31,9 @@ export const Card = ({
   className,
   imageClassName,
 }: Props) => {
+
+    const router = useRouter();
+
   return (
     <>
       {variant === "default" ? (
@@ -36,7 +43,7 @@ export const Card = ({
             {title}
           </p>
           <p className="text-center text-[#414536] mb-[30px]">{body}</p>
-          <p className="cursor-pointer text-[#AD343E] font-bold transition duration-300 ease-in-out hover:text-red-500 hover:text-shadow-[0_0_8px_#AD343E]">
+          <p onClick={() => router.push("/menu")} className="cursor-pointer text-[#AD343E] font-bold transition duration-300 ease-in-out hover:text-red-500 hover:text-shadow-[0_0_8px_#AD343E]">
             Explore Menu
           </p>
         </div>
@@ -54,7 +61,7 @@ export const Card = ({
           </div>
         </div>
       ) : (
-        <div className="bg-[#F9F9F7] rounded-xl lg:p-7 xl:p-9 shadow-md w-full max-w-md flex flex-col justify-between">
+        <div className="bg-[#F9F9F7] rounded-xl p-5 lg:p-7 xl:p-9 shadow-md w-full max-w-md flex flex-col justify-between">
           <div>
           <p className="lg:text-xl  xl:text-2xl font-bold text-[#AD343E]">
             <span className="italic">"</span>

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CakeIcon,
   DrinksIcon,
@@ -8,12 +10,16 @@ import logo from "@/components/assets/bg (1).svg";
 import { Card } from "@/components/ui";
 import { Button } from "@heroui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { AiFillMessage } from "react-icons/ai";
 import { FaClock } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { HiMiniReceiptPercent } from "react-icons/hi2";
 import { IoMdCart } from "react-icons/io";
+
 export default function Home() {
+  const router = useRouter();
+
   const cardData = [
     {
       icon: <TeaIcon />,
@@ -151,59 +157,74 @@ export default function Home() {
   ];
 
   return (
-    <div>
+    <div className="h-full w-full overflow-hidden">
       {/* it is intro bg */}
-      <div className="relative">
-        <Image src={logo} alt="" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <p className="xl:text-[90px] lg:text-[70px] md:text-[60px] md:w-[450px] xl:w-[600px] lg:w-[500px] font-playfair  text-[#2C2F24] leading-none">
+      <section className=" relative w-full h-[90vh] min-h-[600px] overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src={logo}
+          alt="Restaurant hero"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Dark Overlay */}
+        {/* <div className="absolute inset-0 bg-black" /> */}
+
+        {/* Content */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          {/* Heading */}
+          <h1
+            className="
+            font-playfair
+            leading-none 
+            text-4xl 
+            sm:text-5xl 
+            md:text-6xl 
+            lg:text-7xl 
+            xl:text-8xl 
+            max-w-xs 
+            sm:max-w-md 
+            md:max-w-lg 
+            lg:max-w-xl
+          "
+          >
             Best food for your taste
-          </p>
-          <p className="max-w-sm text-md font-mono lg:mt-4 md:mt-3">
+          </h1>
+
+          {/* Description */}
+          <p className="mt-4 text-sm sm:text-base md:text-lg  font-mono max-w-xs sm:max-w-md">
             Discover delectable cuisine and unforgettable moments in our
             welcoming, culinary haven.
           </p>
-          <div className="mt-4 lg:flex gap-4 hidden">
-            <Button
-              size="lg"
-              variant="solid"
-              color="danger"
-              className="rounded-full bg-[#AD343E] "
-            >
-              Book A Table
-            </Button>
-            <Button
-              size="lg"
-              variant="bordered"
-              className="rounded-full border-[#2C2F24]"
-            >
-              Explore Menu
-            </Button>
-          </div>
 
-          <div className="mt-4 flex gap-4  lg:hidden">
+          {/* Buttons */}
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Button
-              size="md"
+              size="lg"
               variant="solid"
-              color="danger"
-              className="rounded-full bg-[#AD343E] "
+              className="rounded-full bg-[#AD343E] text-white px-8"
+              onPress={() => router.push("/book")}
             >
               Book A Table
             </Button>
+
             <Button
-              size="md"
+              size="lg"
               variant="bordered"
-              className="rounded-full border-[#2C2F24]"
+              className="rounded-full border-[#2C2F24] px-8"
+              onPress={() => router.push("/menu")}
             >
               Explore Menu
             </Button>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* it is explore */}
-      <div className="mt-[90px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]">
-        <p className="text-center font-playfair font-medium text-[55px]">
+      <div className=" mt-[90px] px-[20px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]">
+        <p className="text-center font-playfair font-medium text-[40px] md:text-[55px]">
           Browse Our Menu
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 mb-[120px]">
@@ -218,13 +239,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[90px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] bg-[#F9F9F7] grid grid-cols-2 lg:gap-[100px] xl:gap-[140px]">
+      <div className=" mt-[90px] pt-[90px] pb-[120px] px-[20px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] bg-[#F9F9F7] grid lg:grid-cols-2 lg:gap-[100px] xl:gap-[140px]">
         <div className="relative">
           <img
             src="https://www.fitntasty.ch/wp-content/uploads/2022/04/wrap-legumes-poulet.jpg"
-            className="rounded-xl"
+            className="rounded-xl hidden lg:block"
           />
-          <div className="absolute lg:bottom-0 lg:right-[-60px] xl:bottom-[-50px] right-[-20px] bg-gray-800  text-white p-12 rounded-xl">
+          <div className="lg:absolute lg:bottom-0 lg:right-[-60px] xl:bottom-[-50px] right-[-20px] bg-gray-800  text-white p-12 rounded-xl">
             <p className="text-2xl font-bold mb-8">Come and visit us</p>
             <div className="space-y-6">
               {/* Phone number */}
@@ -258,7 +279,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center">
           <div>
-            <p className="font-playfair font-medium lg:text-[40px] xl:text-[55px] lg:leading-[3rem] xl:leading-[4.5rem] mb-6">
+            <p className="font-playfair font-medium text-[30px] lg:text-[40px] xl:text-[55px] lg:leading-[3rem] xl:leading-[4.5rem] mb-6">
               We provide healthy food for your family.
             </p>
             <p className="text-lg text-[#2C2F24] ">
@@ -277,6 +298,7 @@ export default function Home() {
               size="lg"
               className="rounded-full border-[#2C2F24]"
               variant="bordered"
+              onPress={() => router.push("/about")}
             >
               More About Us
             </Button>
@@ -285,8 +307,8 @@ export default function Home() {
       </div>
 
       {/* types */}
-      <div className="mt-[50px] pt-[70px] pb-[70px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] ">
-        <p className="font-playfair font-medium text-[55px] max-w-[600px] leading-[4rem] mb-14">
+      <div className=" mt-[50px] pt-[70px] pb-[70px] px-[20px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] ">
+        <p className="font-playfair font-medium text-[33px] lg:text-[55px] max-w-[600px] lg:leading-[4rem] mb-14">
           We also offer unique services for your events
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -364,20 +386,20 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[30px] pt-[90px] pb-[70px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] ">
-        <p className="font-playfair font-medium text-[55px] text-center mb-14">
+      <div className="mt-[30px] pt-[90px] pb-[70px] px-[20px] md:px-[40px] lg:px-[5rem] xl:px-[7.5rem] ">
+        <p className="font-playfair font-medium text-[33px] lg:text-[55px] text-center mb-14">
           What Our Customers Say
         </p>
-        <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review, index) => (
             <Card key={index} variant="review" {...review} />
           ))}
         </div>
       </div>
 
-      <div className="mt-[90px] pt-[90px] pb-[120px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7]">
+      <div className="mt-[90px] pt-[90px] pb-[120px] px-[20px]  md:px-[40px] lg:px-[5rem] xl:px-[7.5rem]  bg-[#F9F9F7]">
         <div className="flex mb-16 items-center justify-between">
-          <p className="font-playfair font-medium text-[55px]">
+          <p className="font-playfair font-medium text-[33px] lg:text-[55px]">
             Our Blog & Articles
           </p>
           <Button
@@ -385,6 +407,7 @@ export default function Home() {
             variant="solid"
             color="danger"
             className="rounded-full bg-[#AD343E] "
+            onPress={() => router.push("/pages")}
           >
             Read All Articles
           </Button>
